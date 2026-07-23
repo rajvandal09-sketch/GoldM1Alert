@@ -32,7 +32,7 @@ while [ -h "$PRG" ] ; do
     if expr "$link" : '/.*' > /dev/null; then
         PRG="$link"
     else
-        PRG=`dirname "$PRG"`"/$link"
+        PRG=`dirname "$PRG"`"/"$link"
     fi
 done
 SAVED="`pwd`"
@@ -44,7 +44,7 @@ APP_NAME="Gradle"
 APP_BASE_NAME=`basename "$0"`
 
 # Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
-DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+DEFAULT_JVM_OPTS='"−Xmx64m" "−Xms64m"'
 
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD="maximum"
@@ -125,7 +125,7 @@ fi
 
 # For Darwin, add options to specify how the application appears in the dock
 if $darwin; then
-    DEFAULT_JVM_OPTS="$DEFAULT_JVM_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
+    DEFAULT_JVM_OPTS="$DEFAULT_JVM_OPTS \"−Xdock:name=$APP_NAME\" \"−Xdock:icon=$APP_HOME/media/gradle.icns\""
 fi
 
 # For Cygwin or MSYS, switch paths to Windows format before running java
@@ -185,7 +185,7 @@ else
     else
         # For Darwin, add options to specify how the application appears in the dock
         if $darwin; then
-            DEFAULT_JVM_OPTS="$DEFAULT_JVM_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
+            DEFAULT_JVM_OPTS="$DEFAULT_JVM_OPTS \"−Xdock:name=$APP_NAME\" \"−Xdock:icon=$APP_HOME/media/gradle.icns\""
         fi
 
         # For Cygwin or MSYS, switch paths to Windows format before running java
@@ -217,4 +217,3 @@ else
         fi
     fi
 fi
-
