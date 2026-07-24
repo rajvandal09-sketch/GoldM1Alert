@@ -1,4 +1,4 @@
-- name: Checkout Code 
+- name: build.yml
 uses: actions/checkout@v4
 - name: Grant execute permission to gradlew
 run: chmod +x ./gradlew
